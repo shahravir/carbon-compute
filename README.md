@@ -1,5 +1,7 @@
 # Carbon Compute Enterprise
 
+## About
+
 Carbon Compute Enterprise is a hybrid, enterprise-deployable carbon accounting system built around two planes:
 
 1. A host service that runs inside the enterprise AI / infrastructure boundary.
