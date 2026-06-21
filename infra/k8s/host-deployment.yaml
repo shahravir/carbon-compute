@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carbon-compute-host
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: carbon-compute-host
+  template:
+    metadata:
+      labels:
+        app: carbon-compute-host
+    spec:
+      containers:
+        - name: host
+          image: ghcr.io/example/carbon-compute-host:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"
+            - name: LEDGER_SIGNING_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: carbon-compute-secrets
+                  key: ledger-signing-key

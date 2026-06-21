@@ -1,0 +1,12 @@
+services:
+  host:
+    image: node:22-alpine
+    working_dir: /workspace
+    command: node apps/host/src/server.js
+    environment:
+      PORT: 3000
+      LEDGER_SIGNING_KEY: change-me-in-production
+    ports:
+      - "3000:3000"
+    volumes:
+      - ..:/workspace

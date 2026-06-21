@@ -1,0 +1,10 @@
+{
+  "name": "carbon-compute-enterprise",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Enterprise carbon accounting host and admin dashboard with tamper-evident auditability.",
+  "scripts": {
+    "start:host": "node apps/host/src/server.js",
+    "check": "node --check apps/host/src/server.js && node --check apps/host/src/carbon/compute.js && node --check apps/host/src/security/ledger.js && node --check apps/host/src/policy/llm-policy.js && node --check apps/dashboard/public/app.js"
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carbon Compute Enterprise</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">Enterprise carbon accounting</p>
+          <h1>Carbon Compute Enterprise</h1>
+          <p class="lede">Hybrid deployment, tamper-evident audit trails, and deterministic carbon computations for infra, cloud, facility, and LLM workloads.</p>
+        </div>
+        <aside class="hero-grid" id="summary-cards"></aside>
+      </section>
+
+      <section class="content-grid">
+        <article class="card panel wide">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Live calculation</p>
+              <h2>Compute a carbon profile</h2>
+            </div>
+            <button id="seed-demo" class="ghost">Load demo data</button>
+          </div>
+          <textarea id="records-input" spellcheck="false" aria-label="Activity records JSON"></textarea>
+          <div class="panel-actions">
+            <button id="calculate">Calculate</button>
+            <span id="calculation-status">Ready</span>
+          </div>
+          <pre id="calculation-output"></pre>
+        </article>
+
+        <article class="card panel">
+          <p class="eyebrow">Trust</p>
+          <h2>Ledger status</h2>
+          <div id="ledger-status" class="metric-stack"></div>
+        </article>
+
+        <article class="card panel">
+          <p class="eyebrow">Governance</p>
+          <h2>Controls</h2>
+          <ul class="bullet-list">
+            <li>Append-only audit ledger with hash chaining.</li>
+            <li>LLM tool-call policy boundary for write protection.</li>
+            <li>Replayable emissions calculations with explicit factors.</li>
+            <li>Hybrid deployment suitable for enterprise-controlled environments.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
